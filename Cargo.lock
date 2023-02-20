@@ -128,24 +128,8 @@ dependencies = [
 
 [[package]]
 name = "dpdk-io"
-version = "0.1.0"
-dependencies = [
- "bindgen",
- "env_logger 0.10.0",
- "futures",
- "futures-util",
- "libc",
- "log",
- "oneshot",
- "pin-project-lite",
- "pkg-config",
- "tokio",
-]
-
-[[package]]
-name = "dpdk-io"
-version = "0.1.0"
-source = "git+https://github.com/hft-team/dpdk-io#76d64e198004854946ab95e93ff5d082cb86cdb1"
+version = "0.1.1"
+source = "git+https://github.com/hft-team/dpdk-io#db896c0af604a2dbcac0e02a166fb18d7b7e30d7"
 dependencies = [
  "bindgen",
  "env_logger 0.10.0",
@@ -164,7 +148,7 @@ name = "dpdkrs-demo"
 version = "0.1.0"
 dependencies = [
  "bytes",
- "dpdk-io 0.1.0",
+ "dpdk-io",
  "env_logger 0.10.0",
  "futures-util",
  "http-body-util",
@@ -477,10 +461,9 @@ checksum = "9a3a5bfb195931eeb336b2a7b4d761daec841b97f947d34394601737a7bba5e4"
 [[package]]
 name = "hyper"
 version = "0.14.24"
-source = "git+https://github.com/hft-team/hyper?branch=dpdk-v0.14.24#8620ae80edfefd0a6e281ce41081c9bfe121b808"
 dependencies = [
  "bytes",
- "dpdk-io 0.1.0 (git+https://github.com/hft-team/dpdk-io)",
+ "dpdk-io",
  "futures-channel",
  "futures-core",
  "futures-util",

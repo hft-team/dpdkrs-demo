@@ -7,11 +7,11 @@ version = "0.1.0"
 
 [dependencies]
 bytes = "1"
-dpdk-io = {path = "../dpdk-io"}
+dpdk-io = {version = "0.1.1", git = "https://github.com/hft-team/dpdk-io"}
 env_logger = "0.10.0"
 futures-util = {version = "0.3", default-features = false, features = ["alloc"]}
 http-body-util = "0.1.0-rc.2"
-hyper = {git = "https://github.com/hft-team/hyper", branch = "dpdk-v0.14.24", features = ["full", "dpdk"]}
+hyper = {path = "../hyper", features = ["full", "dpdk"]}
 log = "0.4.17"
 matches = "0.1"
 num_cpus = "1.0"

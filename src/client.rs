@@ -11,7 +11,13 @@ type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>
 async fn main() -> Result<()> {
     dpdk_io::bootstrap();
 
-    // pretty_env_logger::init();
+    let a = dpdk_io::dpdk_agent();
+
+    let b = dpdk_io::dpdk_agent();
+    drop(a);
+    drop(b);
+
+    pretty_env_logger::init();
 
     // Some simple CLI args requirements...
     let url = String::from("http://www.baidu.com");
@@ -23,9 +29,14 @@ async fn main() -> Result<()> {
         return Ok(());
     }
 
-    fetch_url(url).await
+    fetch_url(url).await.expect("");
+
+    loop {}
+
+    // Ok(())
 }
 
+#[allow(dead_code)]
 async fn fetch_url(url: hyper::Uri) -> Result<()> {
     let client = Client::new();
 
