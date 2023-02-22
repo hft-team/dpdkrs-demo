@@ -157,7 +157,7 @@ checksum = "5827cebf4670468b8772dd191856768aedcb1b0278a04f989f7766351917b9dc"
 [[package]]
 name = "dpdk-io"
 version = "0.2.0"
-source = "git+https://github.com/hft-team/dpdk-io#43db0c7be269ae8c2c7564afcf0f202536cdfea9"
+source = "git+https://github.com/hft-team/dpdk-io#6316f12a2f9775bb30614f128b977fc9fa1184fc"
 dependencies = [
  "bindgen",
  "env_logger 0.10.0",
@@ -1205,9 +1205,9 @@ dependencies = [
 
 [[package]]
 name = "slab"
-version = "0.4.7"
+version = "0.4.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4614a76b2a8be0058caa9dbbaf66d988527d86d003c11a94fbd335d7661edcef"
+checksum = "6528351c9bc8ab22353f9d776db39a20288e8d6c37ef8cfe3317cf875eecfc2d"
 dependencies = [
  "autocfg",
 ]
